@@ -18,8 +18,8 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btnCount_clicked();
-    void on_btnReset_clicked();
+    void btnCount_clicked();
+    void btnReset_clicked();
 
 private:
     Ui::MainWindow *ui;

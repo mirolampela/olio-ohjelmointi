@@ -7,8 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QObject::connect(ui->btnCount, &QPushButton::clicked, this, &MainWindow::on_btnCount_clicked);
-    QObject::connect(ui->btnReset, &QPushButton::clicked, this, &MainWindow::on_btnReset_clicked);
+    QObject::connect(ui->btnCount, &QPushButton::clicked, this, &MainWindow::btnCount_clicked);
+    QObject::connect(ui->btnReset, &QPushButton::clicked, this, &MainWindow::btnReset_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -16,7 +16,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_btnCount_clicked()
+void MainWindow::btnCount_clicked()
 {
     counter++;
 
@@ -27,7 +27,7 @@ void MainWindow::on_btnCount_clicked()
     ui->txtResult->setText(s);
 }
 
-void MainWindow::on_btnReset_clicked()
+void MainWindow::btnReset_clicked()
 {
     counter = 0;
 
